@@ -1,0 +1,59 @@
+<style>
+    html {
+        background-image: url(bubbles.bmp);
+        color: white;
+    }
+</style>
+<HTML>
+<head>
+    <title>Rowan's Website</title>
+    <center>
+        <div style="background-color: black; line-height: 0.75; padding: 10px;">
+            <h1>Windows Password Reset From USB/Optical</h1>
+            <h2>Could be good for anything, like changing the admin password on school laptops</h2>
+        </div>
+    </center>
+</head>
+    <hr>
+<body>
+    <div style="background-color: black; padding: 10px;">
+    <h3><i>1. Getting Things Ready</i></h3>
+        <p>Download a Windows 10 Pre-Installation Environment, you can do so <a href="https://archive.org/details/wpe-64">here</a>, under "DOWNLOAD OPTIONS" you should see "ISO IMAGE", click that and it will start downloading.</p>
+        <img src="image.png">
+        <p>I'm gonna assume you've downloaded the file already, if you're using a USB stick you'll want to use <a href="https://rufus.ie/en/">Rufus</a>, if you're using CDs or DVDs you'll want to use a disc burning tool.</p>
+        <p>If you're using Rufus, go to the above link and scroll down until you see "Downloads", then click "Rufus 3.22".</p>
+        <img src="image2.png" width="500px">A
+    <h3><i>2. Setting Things Up</i></h3>
+        <p>Once you have everything downloaded, install Rufus by going to whatever folder it was download in, and then double-clicking the file, it should pop-up in a few seconds and look like this</p>
+        <img src="image3.png" width="300">
+        <p>At the top you'll see a menu, it should have your USB device listed alongside its drive letter, this doesn't need to be touched unless you have multiple USB sticks attached to your computer.</p>
+        <p>Below that is another menu and a button, the button should say "SELECT" on it, click this and find the ISO file you download in the previous step.</p>
+        <p>There are other things you can change however I highly recommend just leaving it unless you know what you're doing.</p>
+        <p>Finally, once everything is set, click "START" at the bottom and wait for it to finish. You'll get a big message box with options in it, just click OK</p>
+    <h3><i>3. Preparing The Drive</i></h3>
+        <p>Since you're reading this we're gonna assume that you've already done the previous steps.</p>
+        <p>Now that you probably have a bootable drive, we're gonna have to add some tools, one I recommend is NTPWEdit for changing passwords.</p>
+        <p>Download NTPWEdit from <a href="http://www.cdslow.org.ru/en/ntpwedit/">here</a>, scroll down and click "ntpwedit.zip". Open your USB drive in Windows Explorer and have it ready for later. Once NTPWEdit is finished downloading, open the ZIP file and copy the contents onto the USB drive.</p>
+        <img src="image4.png" width="400px">
+    <h3><i>4. Preparing The Computer</i></h3>
+        <img src="image5.jpg" width="500">
+        <p>Should be obvious, but first of all, plug in the USB stick.</p>
+        <p>Depending on your machine, they key required to enter the UEFI boot menu may be different, for Acer and Dell it's F12, while ASUS and some others don't even have one, you will have to look things up.</p>
+        <p>Once you are in, it should look something like this.</p>
+        <img src="image7.jpg" width="400">
+        <p>Under "UEFI BOOT" or similar, you should see the name of the manufacturer of your USB stick, use the arrow keys to navigate to that and press enter.</p>
+        <p>You should see a message that says "Press any key to boot from USB" on the screen, smash any key you can NOW.</p>
+        <p>Once that is done, you should see a Windows logo on the screen, with some spinny dots under it. </p>
+        <img src="image9.png" width="500">
+        <p>Don't be scared, there really isn't a lot to mess up here. Once you have gained confidence in yourself, type "ntpwedit64.exe" into the commannd prompt (the big black thing you're looking at on the screen). After you have done that, a window should appear.</p>
+        <img src="image10.png">
+        <p>If you see this window, click "<i>Open</i>", then it should populate with a bunch of things.</p>
+        <img src="image11.png">
+        <p>Administrator, DefaultAccount, Guest, and WDAGUtilityAccount are all system accounts and should not be touched under any circumstances. Click on your username and click "Change password", a window should appear with instructions more clear than I could ever hope to write. Follow the instructions on the window.</p>
+        <img src="image12.png">
+        <p>Once you are done with that, close the window, and type "wpeutil reboot" into the command prompt (This will restart the computer). After the screen goes blank, take out the USB and you should be back in like normal.</p>
+        <h3><i>I hope this tutorial was helpful</i></h3>
+        <a href="index.html">Go back to were you probably were before</a>
+    </div>    
+</body>
+</HTML>
